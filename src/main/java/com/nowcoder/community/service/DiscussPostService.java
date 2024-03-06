@@ -18,6 +18,8 @@ public class DiscussPostService {
     @Autowired
     SensitiveFilter sensitiveFilter;
 
+
+
     public List<DiscussPost> findDiscussPosts(int userId,int pagenum,int pagesize)
     {
       return discussPostMapper.selectDiscussPosts(userId,pagenum,pagesize);
