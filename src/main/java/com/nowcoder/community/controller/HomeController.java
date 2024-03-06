@@ -30,7 +30,7 @@ public class HomeController {
         //MODEL 自动封装参数
         page.setRows(discussPostService.findDiscussPostRows(0));
         page.setPath("/index");
-        List<DiscussPost> listdi = discussPostService.findDiscussPosts(0,page.getOffest(),page.getLimit());
+        List<DiscussPost> listdi = discussPostService.findDiscussPosts(0,page.getOffset(),page.getLimit());
 
         List<Map<String,Object>>  discussPosts = new ArrayList<>();
 

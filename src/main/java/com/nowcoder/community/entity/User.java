@@ -3,6 +3,7 @@ package com.nowcoder.community.entity;
 import java.util.Date;
 
 public class User {
+
     private int id;
     private String username;
     private String password;
@@ -13,7 +14,6 @@ public class User {
     private String activationCode;
     private String headerUrl;
     private Date createTime;
-
 
     public int getId() {
         return id;

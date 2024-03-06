@@ -51,7 +51,7 @@ public class Page {
     }
 
 //    获取当前页的起始页
-    public int getOffest()
+    public int getOffset()
     {
         return (current-1) * limit;
     }
@@ -78,6 +78,7 @@ public class Page {
      */
     public int getFrom()
     {
+        if(current==2) return current-1;
         return current >2 ? current-2 : current;
     }
 
@@ -88,7 +89,9 @@ public class Page {
      */
     public int getTo()
     {
-        return current <getTotal()-2 ? current+2 : current;
+        int to = current + 2;
+        int total = getTotal();
+        return to > total ? total : to;
     }
 
 }
